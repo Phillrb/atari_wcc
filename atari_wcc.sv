@@ -277,7 +277,7 @@ wire [7:0] video;
 
 atari_wcc atari_wcc
 (
-	.clk(clk_sys),
+	//.clk(clk_sys),
 	.reset(reset),
 	
 	.pal(status[2]),

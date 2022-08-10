@@ -12,22 +12,18 @@ use ieee.numeric_std.all;
 
 entity atari_wcc is
 port(
- -- TODO hook this to outclk_0
- clock_7        : in std_logic;
-
- -- ?????? VIDEO ??????
- video_r        : out std_logic_vector(2 downto 0);
- video_g        : out std_logic_vector(2 downto 0);
- video_b        : out std_logic_vector(1 downto 0);
- video_clk      : out std_logic;
- video_csync    : out std_logic;
- video_hblank   : out std_logic;
- video_vblank   : out std_logic;
- video_hs       : out std_logic;
- video_vs       : out std_logic;
- video_ce       : out std_logic;
  
- audio_out      : out std_logic_vector(15 downto 0);
+ --audio_out      : out std_logic_vector(15 downto 0);
+ video 				: out std_logic_vector(7 downto 0);
+ 
+ HBlank 				: out std_logic;
+ HSync 				: out std_logic;
+ VBlank 				: out std_logic;
+ VSync 				: out std_logic;
+ ce_pix 				: out std_logic;
+ pal  				: out std_logic;
+ reset 				: out std_logic;
+ scandouble 		: out std_logic;
   
  coin1          : in std_logic;
  start1         : in std_logic; 
@@ -49,5 +45,6 @@ end atari_wcc;
 architecture struct of atari_wcc is
 
 begin
+
 
 end struct;
